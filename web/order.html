@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<script src="js/particles.js"></script>
+		<script src="js/customization.js"></script>
+		<link rel="icon" href="assets/favicon.png">
+		<title>Order | M A S K</title>
+	</head>
+	<body onload="creditCard()">
+		<div id="particles-js" style=""></div>
+		<script src="js/app.js"></script>
+		<a href="index.html" class = "text back" style="display:inline-block"><h3>⬅ Back<h3></a>
+		<h2 id = "page-title">ORDER</h2>
+		
+		<h2 class="text right-bg">TOTAL PRICE: <span id="price">25</span> lv.</h2>
+		
+		<div class="mask-bg">
+			<img style="position:absolute" id="goggles" src="assets/maskPic/GOG_BK.png" draggable="false"/>
+			<img style="position:absolute" id="mask" src="assets/maskPic/MASK_BK.png" draggable="false"/>
+			<img style="position:absolute" id="led" src="assets/maskPic/LED_W.png" draggable="false"/>
+			<img style="position:absolute" id="lmask" src="assets/maskPic/LMASK_0.png" draggable="false"/>
+		</div>
+		<h1 class="text" style="margin-top:670px; font-size:10pt">Picture is with illustrative purpose only</h1>
+		<h1 class="text" style="font-size:30pt">Appearance</h1>
+		
+		<table style="padding-bottom:5%">
+			<tr>
+				<td><h1 class="text">Goggles color</h1></td>
+				<td width="12.5%" style="background-color:black; border-style: solid; border-color: white;" class="cell selected" onclick="Select(1, 'S')" id="S1">
+					<h1 class="text">Black</h1>
+					<h1 class="text" style="font-size:20px">10lv.</h1>
+				</td>
+				<td width="12.5%" style="background-color:red" class="cell" onclick="Select(2, 'S')" id="S2">
+					<h1 class="text">Red</h1>
+					<h1 class="text" style="font-size:20px">10lv.</h1>
+				</td>
+				<td width="12.5%" style="background-color:blue" class="cell" onclick="Select(3, 'S')" id="S3">
+					<h1 class="text">Blue</h1>
+					<h1 class="text" style="font-size:20px">10lv.</h1>
+				</td>
+				<td width="12.5%" style="background-color:white" class="cell" onclick="Select(4, 'S')" id="S4">
+					<h1 class="text" style="color:black">White</h1>
+					<h1 class="text" style="font-size:20px; color:black">10lv.</h1>
+				</td>
+				<td width="12.5%" style="background-image:url(assets/camo.jpg)" class="cell" onclick="Select(5, 'S')" id="S5">
+					<h1 class="text">Camo</h1>
+					<h1 class="text" style="font-size:20px">15lv.</h1>
+				</td>
+				<td width="12.5%" style="background-image:url(assets/cfiber.jpg)" class="cell" onclick="Select(6, 'S')" id="S6">
+					<h1 class="text">Carbon Fiber</h1>
+					<h1 class="text" style="font-size:20px">20lv.</h1>
+				</td>
+				<td width="12.5%" style="background-image:url(assets/steel.jpg)" class="cell" onclick="Select(7, 'S')" id="S7">
+					<h1 class="text" style="color:black">Steel</h1>
+					<h1 class="text" style="font-size:20px; color:black">35lv.</h1>
+				</td>
+			</tr>
+			<tr>
+				<td width="12.5%"><h1 class="text">Mask color</h1></td>
+				<td width="12.5%" style="background-color:black; border-style: solid; border-color: white" class="cell selected" onclick="Select(1, 'B')" id="B1">
+					<h1 class="text">Black</h1>
+					<h1 class="text" style="font-size:20px">15lv.</h1>
+				</td>
+				<td width="12.5%" style="background-color:red" class="cell" onclick="Select(2, 'B')" id="B2">
+					<h1 class="text">Red</h1>
+					<h1 class="text" style="font-size:20px">15lv.</h1>
+				</td>
+				<td width="12.5%" style="background-color:blue" class="cell" onclick="Select(3, 'B')" id="B3">
+					<h1 class="text">Blue</h1>
+					<h1 class="text" style="font-size:20px">15lv.</h1>
+				</td>
+				<td width="12.5%" style="background-color:white" class="cell" onclick="Select(4, 'B')" id="B4">
+					<h1 class="text" style="color:black">White</h1>
+					<h1 class="text" style="font-size:20px; color:black">15lv.</h1>
+				</td>
+				<td width="12.5%" style="background-image:url(assets/camo.jpg)" class="cell" onclick="Select(5, 'B')" id="B5">
+					<h1 class="text">Camo</h1>
+					<h1 class="text" style="font-size:20px">20lv.</h1>
+				</td>
+				<td width="12.5%" style="background-image:url(assets/cfiber.jpg)" class="cell" onclick="Select(6, 'B')" id="B6">
+					<h1 class="text">Carbon Fiber</h1>
+					<h1 class="text" style="font-size:20px">25lv.</h1>
+				</td>
+				<td width="12.5%" style="background-image:url(assets/steel.jpg)" class="cell" onclick="Select(7, 'B')" id="B7">
+					<h1 class="text" style="color:black">Steel</h1>
+					<h1 class="text" style="font-size:20px; color:black">45lv.</h1>
+				</td>
+			</tr>
+			<tr>
+				<td width="12.5%"><h1 class="text">LED color</h1></td>
+				<td width="12.5%" style="background-color:white" class="cell selected" onclick="Select(1, 'L')" id="L1">
+					<h1 class="text" style="color:black">White</h1>
+				</td>
+				<td width="12.5%" style="background-color:red" class="cell" onclick="Select(2, 'L')" id="L2">
+					<h1 class="text">Red</h1>
+				</td>
+				<td width="12.5%" style="background-color:blue" class="cell" onclick="Select(3, 'L')" id="L3">
+					<h1 class="text">Blue</h1>
+				</td>
+				<td width="12.5%" style="background-color:yellow" class="cell" onclick="Select(4, 'L')" id="L4">
+					<h1 class="text" style="color:black">Yellow</h1>
+				</td>
+				<td width="12.5%" style="background-color:green" class="cell" onclick="Select(5, 'L')" id="L5">
+					<h1 class="text">Green</h1>
+				</td>
+				<td width="12.5%" style="background-color: deeppink" class="cell" onclick="Select(6, 'L')" id="L6">
+					<h1 class="text" style="color:black">Pink</h1>
+				</td>
+				<td width="12.5%" style="background-color:orange" class="cell" onclick="Select(7, 'L')" id="L7">
+					<h1 class="text" style="color:black">Orange</h1>
+				</td>
+			</tr>
+		</table>
+		<table cellspacing="10">
+			<tr style="padding-right:10px">
+				<td class="cell selected" onclick="Select(1, 'M')" id="M1">
+					<h1 class="text">No Mask</h1>
+					<h1 class="text" style="font-size:20px">0lv.</h1>
+					<img src="assets/mask0.png" width="150" class="mask-img"/>
+				</td>
+				<td class="cell" onclick="Select(2, 'M')" id="M2">
+					<h1 class="text">Mask 1</h1>
+					<h1 class="text" style="font-size:20px">20lv.</h1>
+					<img src="assets/mask1.png" width="150" class="mask-img"/>
+				</td>
+				<td class="cell" onclick="Select(3, 'M')" id="M3">
+					<h1 class="text">Mask 2</h1>
+					<h1 class="text" style="font-size:20px">20lv.</h1>
+					<img src="assets/mask2.png" width="150" class="mask-img"/>
+				</td>
+				<td class="cell" onclick="Select(4, 'M')" id="M4">
+					<h1 class="text">Mask 3</h1>
+					<h1 class="text" style="font-size:20px">25lv.</h1>
+					<img src="assets/mask3.jpg" width="150" class="mask-img"/>
+				</td>
+				<td class="cell" onclick="Select(5, 'M')" id="M5">
+					<h1 class="text">Mask 4</h1>
+					<h1 class="text" style="font-size:20px">25lv.</h1>
+					<img src="assets/mask4.jpg" width="150" class="mask-img"/>
+				</td>
+				<td class="cell" onclick="Select(6, 'M')" id="M6">
+					<h1 class="text">Mask 5</h1>
+					<h1 class="text" style="font-size:20px">30lv.</h1>
+					<img src="assets/mask5.png" width="150" class="mask-img"/>
+				</td>
+				<td class="cell" onclick="Select(7, 'M')" id="M7">
+					<h1 class="text">Mask 6</h1>
+					<h1 class="text" style="font-size:20px">35lv.</h1>
+					<img src="assets/mask6.png" width="150" class="mask-img"/>
+				</td>
+			</tr>
+		</table>
+		
+		<h1 class="text" style="font-size:30pt; margin-top: 10%">Emotes pack</h1>
+		<table cellspacing="10">
+			<tr>
+				<td class="cell selected" onclick="Select(1, 'X')" id="X1" width="25%">
+					<h1 class="text">Normal</h1>
+					<h1 class="text" style="font-size:20px">0lv.</h1>
+					<h1 class="text" style="font-size:25px">Contains the basic 5 emotes</h1>
+					
+				</td>
+				<td class="cell" onclick="Select(2, 'X')" id="X2" width="25%" style="background-color: DarkBlue ">
+					<h1 class="text">Extra</h1>
+					<h1 class="text" style="font-size:20px">5lv.</h1>
+					<h1 class="text" style="font-size:25px">Adds an additional 5 emotes</h1>
+				</td>
+				<td class="cell" onclick="Select(3, 'X')" id="X3" width="25%" style="background-color: Crimson">
+					<h1 class="text">Full</h1>
+					<h1 class="text" style="font-size:20px">10lv.</h1>
+					<h1 class="text" style="font-size:25px">Unlock all of the emotes</h1>
+				</td>
+				<td class="cell" onclick="Select(4, 'X')" id="X4" width="25%" style="background-color: White">
+					<h1 class="text" style="color:black">Custom</h1>
+					<h1 class="text" style="font-size:20px; color:black">20lv.</h1>
+					<h1 class="text" style="font-size:25px; color:black">Replace each emote with<br>one of your choice</h1>
+				</td>
+		</table>
+		
+		<div class="custom-inputs" id="customization">
+			<h1 class="text">Put the symbols for both eyes in the corresponding text input</h1>
+			<input type="text" name="1" maxlength="2" placeholder="1">
+			<input type="text" name="1" maxlength="2" placeholder="2">
+			<input type="text" name="1" maxlength="2" placeholder="3">
+			<input type="text" name="1" maxlength="2" placeholder="4">
+			<input type="text" name="1" maxlength="2" placeholder="5">
+			<input type="text" name="1" maxlength="2" placeholder="6">
+			<input type="text" name="1" maxlength="2" placeholder="7">
+			<input type="text" name="1" maxlength="2" placeholder="8">
+			<input type="text" name="1" maxlength="2" placeholder="9">
+			<input type="text" name="1" maxlength="2" placeholder="10">
+			<input type="text" name="1" maxlength="2" placeholder="11">
+			<input type="text" name="1" maxlength="2" placeholder="12"><br>
+			<input type="text" name="1" maxlength="2" placeholder="13">
+			<input type="text" name="1" maxlength="2" placeholder="14">
+			<input type="text" name="1" maxlength="2" placeholder="15">
+			<input type="text" name="1" maxlength="2" placeholder="16">
+			<input type="text" name="1" maxlength="2" placeholder="17">
+			<input type="text" name="1" maxlength="2" placeholder="18">
+			<input type="text" name="1" maxlength="2" placeholder="19">
+			<input type="text" name="1" maxlength="2" placeholder="20">
+			<input type="text" name="1" maxlength="2" placeholder="21">
+			<input type="text" name="1" maxlength="2" placeholder="22">
+			<input type="text" name="1" maxlength="2" placeholder="23">
+			<input type="text" name="1" maxlength="2" placeholder="24"><br>
+			<input type="text" name="1" maxlength="2" placeholder="25">
+			<input type="text" name="1" maxlength="2" placeholder="26">
+			<input type="text" name="1" maxlength="2" placeholder="27">
+			<input type="text" name="1" maxlength="2" placeholder="28">
+			<input type="text" name="1" maxlength="2" placeholder="29">
+			<input type="text" name="1" maxlength="2" placeholder="30">
+			<input type="text" name="1" maxlength="2" placeholder="31">
+			<input type="text" name="1" maxlength="2" placeholder="32">
+			<input type="text" name="1" maxlength="2" placeholder="33">
+			<input type="text" name="1" maxlength="2" placeholder="34">
+			<input type="text" name="1" maxlength="2" placeholder="35">
+			<input type="text" name="1" maxlength="2" placeholder="36"><br>
+			<input type="text" name="1" maxlength="2" placeholder="37">
+			<input type="text" name="1" maxlength="2" placeholder="38">
+			<input type="text" name="1" maxlength="2" placeholder="39">
+			<input type="text" name="1" maxlength="2" placeholder="40">
+			<input type="text" name="1" maxlength="2" placeholder="41">
+			<input type="text" name="1" maxlength="2" placeholder="42">
+			<input type="text" name="1" maxlength="2" placeholder="43">
+			<input type="text" name="1" maxlength="2" placeholder="44">
+			<input type="text" name="1" maxlength="2" placeholder="45">
+			<input type="text" name="1" maxlength="2" placeholder="46">
+			<input type="text" name="1" maxlength="2" placeholder="47">
+			<input type="text" name="1" maxlength="2" placeholder="48">
+		</div>
+		
+		<img class="scheme-img" src="assets/emotes1.png" style="display:block; margin-left:auto; margin-right:auto" height="689" width="839"/>
+		
+		<h1 class="text" style="font-size:30pt; margin-top: 10%">Add-ons</h1>
+		<table cellspacing="10">
+			<tr>
+				<td class="cell addon-box" style="background-color:#227; height:300px" onclick="Select(1, 'F')" id="F1" width="33%">
+					<h1 class="text">Add voice modulator</h1>
+					<h1 class="text" style="font-size:20px">5lv.</h1>
+					<table>
+					<tr>
+					<td><img src="assets/robot.png" width="100" /></td>
+					<td><h1 class="text" style="font-size:25px">Include a voice changer<br>in the mask, giving your voice<br>a slightly more robotic tone</h1></td>
+					</tr>
+					</table>
+				</td>
+				<td class="cell addon-box" style="background-color:#765; height:300px" onclick="Select(2, 'F')" id="F2" width="33%">
+					<h1 class="text">Add headphones</h1>
+					<h1 class="text" style="font-size:20px">10lv.</h1>
+					<table>
+					<tr>
+					<td><img src="assets/headphones.png" width="100" /></td>
+					<td><h1 class="text" style="font-size:25px">Add a pair of high quality<br>speakers located on both sides<br>over your ears, connectable<br>via bluetooth</h1></td>
+					</tr>
+					</table>
+				</td>
+				<td class="cell addon-box" style="background-color:#272; height:300px" onclick="Select(3, 'F')" id="F3" width="33%">
+					<h1 class="text">Add a second battery pack</h1>
+					<h1 class="text" style="font-size:20px">10lv.</h1>
+					<table>
+					<tr>
+					<td><img src="assets/twoBattery.png" width="100" /></td>
+					<td><h1 class="text" style="font-size:25px; padding-left:10px">Add a second battery,<br>doubling the use time<br>with one charge</h1></td>
+					</tr>
+					</table>
+				</td>
+		</table>
+		
+		<div class="card-form">
+			<h1 class="text" style="font-size:30pt; padding-top:20px">Confirm Purchase</h1>
+			<div class="payment">
+				<form>
+				<table style="background:linear-gradient(to bottom, lightgray, rgba(0,0,0,0)); border-radius: 5px">
+				<tr>
+					<td width="30%">
+						<h1 class="text">First Name:</h1>
+					</td>
+					<td colspan="3">
+						<input type="text"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h1 class="text">Last Name:</h1>
+					</td>
+					<td colspan="3">
+						<input type="text"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h1 class="text">Card Number:</h1>
+					</td>
+					<td>
+						<input type="text" maxlength="19" style="width:250px" onkeyup="creditCard()" id="cardNumInput"/>
+					</td>
+					<td>
+						<h1 class="text">CVV:</h1>
+					</td>
+					<td>
+						<input type="text" maxlength="3" style="width:50px"/>
+					</td>
+				</tr>
+				<tr>
+					<td width="100px"><h1 class="text">Expiration Date:</h1></td>
+					<td>
+					<select>
+						<option value="01">January</option>
+						<option value="02">February </option>
+						<option value="03">March</option>
+						<option value="04">April</option>
+						<option value="05">May</option>
+						<option value="06">June</option>
+						<option value="07">July</option>
+						<option value="08">August</option>
+						<option value="09">September</option>
+						<option value="10">October</option>
+						<option value="11">November</option>
+						<option value="12">December</option>
+					</select>
+					<select>
+						<option value="18">2018</option>
+						<option value="19">2019</option>
+						<option value="20">2020</option>
+						<option value="21">2021</option>
+						<option value="21">2022</option>
+						<option value="21">2023</option>
+					</select>
+					</td>
+				</tr>
+				<tr>
+				<td colspan="3" style="text-align:center">
+					<img src="assets/001-visa.png" style="height:50px" id="visa" class="deactivated"/>
+					<img src="assets/002-maestro.png" style="height:50px" id="maestro" class="deactivated"/>
+					<img src="assets/003-mastercard.png" style="height:50px" id="mastercard" class="deactivated"/>
+					<img src="assets/004-jcb.png" style="height:50px" id="JCB" class="deactivated"/>
+					<img src="assets/005-discover.png" style="height:50px" id="discover" class="deactivated"/>
+					<img src="assets/006-dinners-club.png" style="height:50px" id="dinners-club" class="deactivated"/>
+					<img src="assets/007-american-express.png" style="height:50px" id="american-express" class="deactivated"/>
+				</td>
+				</tr>
+				<tr>
+				<td colspan="4"  align="center"><hr>
+					<input type="submit" class="button" value="Place Order"/>
+				</td>
+				</tr>
+				</table>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>
